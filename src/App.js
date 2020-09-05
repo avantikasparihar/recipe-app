@@ -1,6 +1,8 @@
 import React,{useEffect, useState} from 'react'
 import Recipe from './Recipe'
 import './App.css'
+import Header from './Header'
+import Footer from './Footer'
 
 function App() {
 
@@ -33,6 +35,7 @@ function App() {
 
   return (
     <div className="App">
+      <Header />
       <form onSubmit={getSearch} className="search-form">
         <input className="search-bar" type="text" value={search} onChange={updateSearch} />
         <button className="button" type="submit"><span>Search</span></button>
@@ -48,6 +51,7 @@ function App() {
           />
         ))}
       </div>
+      <Footer />
     </div>
   )
 }
